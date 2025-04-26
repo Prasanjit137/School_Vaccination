@@ -125,15 +125,20 @@ This system simulates real-world workflows with a focus on data integrity, effec
 
 ## Screenshots
 
+#### LoginPage.png
+![App Screenshot](https://github.com/Prasanjit137/School_Vaccination/blob/e33680aaf2d6c0a0758e4a3e473bebe4429ff5b0/demo_data/images/LoginPage.png)
+
+#### Dashboard.png
 ![App Screenshot](https://github.com/Prasanjit137/School_Vaccination/blob/1b1c77378ab25d9e662fc45d296fed58d4c99012/demo_data/images/Dashboard.png)
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+#### ManageStudents.png
+![App Screenshot](https://github.com/Prasanjit137/School_Vaccination/blob/e33680aaf2d6c0a0758e4a3e473bebe4429ff5b0/demo_data/images/ManageStudents.png)
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+#### ManageVaccinations.png
+![App Screenshot](https://github.com/Prasanjit137/School_Vaccination/blob/e33680aaf2d6c0a0758e4a3e473bebe4429ff5b0/demo_data/images/ManageVaccinations.png)
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
-
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+#### Reports.png
+![App Screenshot](https://github.com/Prasanjit137/School_Vaccination/blob/e33680aaf2d6c0a0758e4a3e473bebe4429ff5b0/demo_data/images/Reports.png)
 
 
 

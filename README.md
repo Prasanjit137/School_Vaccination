@@ -81,11 +81,11 @@ This system simulates real-world workflows with a focus on data integrity, effec
 ```
 - Configure .env file for database connection:
 ```bash
-	DB_HOST=localhost
-    DB_USER=root
-    DB_PASSWORD=12345678
-    DB_NAME= my_school_vaccination
-    JWT_SECRET=supersecretkey123
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=12345678
+DB_NAME= my_school_vaccination
+JWT_SECRET=supersecretkey123
 ```
 - Run the backend server:
 ```bash

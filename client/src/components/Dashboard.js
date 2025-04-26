@@ -18,8 +18,8 @@ const Dashboard = () => {
     const fetchData = async () => {
       try {
         const [studentsRes, drivesRes] = await Promise.all([
-          axios.get('http://localhost:5000/students'),
-          axios.get('http://localhost:5000/vaccination-drives', {
+          axios.get('http://localhost:5000/api/students'),
+          axios.get('http://localhost:5000/api/drives', {
             headers: {
               Authorization: `Bearer ${localStorage.getItem('token')}`,
             },

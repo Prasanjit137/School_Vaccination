@@ -20,7 +20,7 @@ const Home = () => {
       }
 
       try {
-        const res = await fetch('http://localhost:5000/home', {
+        const res = await fetch('http://localhost:5000/api/auth/home', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -111,7 +111,6 @@ const Home = () => {
           </ul>
         </div>
 
-        {/* Main Content */}
         <div className="col-md-10 p-5 bg-light">
           <div className="container-fluid">
             <div className="card shadow-lg border-0 rounded-4">

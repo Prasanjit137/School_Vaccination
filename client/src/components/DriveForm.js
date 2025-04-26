@@ -39,7 +39,7 @@ const DriveForm = ({
     };
 
     try {
-      let url = 'http://localhost:5000/vaccination-drives';
+      let url = 'http://localhost:5000/api/drives';
       let method = 'POST';
 
       if (!isCreating) {

@@ -4,7 +4,7 @@ import AddStudentForm from './AddStudentForm';
 import CsvUpload from './CsvUpload';
 import StudentTable from './StudentTable';
 import PendingBookings from './PendingBookings';
-import ToggleSwitch from './ToggleSwitch'; // Import the toggle component
+import ToggleSwitch from './ToggleSwitch'; 
 
 const ManageStudents = () => {
   const [students, setStudents] = useState([]);
@@ -26,7 +26,7 @@ const ManageStudents = () => {
 
   const fetchStudents = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/students');
+      const res = await axios.get('http://localhost:5000/api/students');
       setStudents(res.data);
     } catch (err) {
       console.error('Error fetching students:', err);
@@ -43,7 +43,7 @@ const ManageStudents = () => {
     const payload = { ...newStudent };
     if (payload.vaccinationStatus === 'Not Vaccinated') payload.vaccinationDate = null;
     try {
-      await axios.post('http://localhost:5000/students', payload);
+      await axios.post('http://localhost:5000/api/students', payload);
       setNewStudent({ name: '', class: '', studentId: '' });
       fetchStudents();
     } catch (err) {
@@ -73,7 +73,7 @@ const ManageStudents = () => {
       return alert('You can only mark as Vaccinated.');
     }
     try {
-      await axios.put(`http://localhost:5000/students/${id}`, editData);
+      await axios.put(`http://localhost:5000/api/students/${id}`, editData);
       setEditingIndex(null);
       fetchStudents();
     } catch (err) {
@@ -83,7 +83,7 @@ const ManageStudents = () => {
 
   const handleMarkAsVaccinated = async () => {
     try {
-      await axios.put(`http://localhost:5000/vaccinationStatus/${editData.id}`, {
+      await axios.put(`http://localhost:5000/api/students/vaccinationStatus/${editData.id}`, {
         ...editData,
         vaccinationStatus: 'Vaccinated'
       });
@@ -98,7 +98,7 @@ const ManageStudents = () => {
     const { vaccinationName, vaccinationDate, id } = editData;
     if (!vaccinationName || !vaccinationDate) return alert('Please fill all vaccination fields!');
     try {
-      await axios.put(`http://localhost:5000/vaccination/${id}`, {
+      await axios.put(`http://localhost:5000/api/students/vaccination/${id}`, {
         vaccinationName,
         vaccinationDate,
         vaccinationStatus: 'Not Vaccinated',
@@ -113,7 +113,7 @@ const ManageStudents = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/students/${id}`);
+      await axios.delete(`http://localhost:5000/api/students/${id}`);
       fetchStudents();
     } catch (err) {
       console.error('Error deleting student:', err);
@@ -125,7 +125,7 @@ const ManageStudents = () => {
     const formData = new FormData();
     formData.append('file', csvFile);
     try {
-      await axios.post('http://localhost:5000/upload-csv', formData, {
+      await axios.post('http://localhost:5000/api/students/upload-csv', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       alert('CSV uploaded successfully!');
@@ -179,9 +179,9 @@ const ManageStudents = () => {
       onChange={(e) => setSearchTerm(e.target.value)}
       className="form-control mb-4"
       style={{
-        borderRadius: '0.375rem', // Rounded corners
-        borderColor: '#ced4da', // Light border color
-        padding: '0.375rem 0.75rem', // Proper padding
+        borderRadius: '0.375rem', 
+        borderColor: '#ced4da', 
+        padding: '0.375rem 0.75rem', 
       }}
     />
   </div>

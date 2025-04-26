@@ -7,7 +7,7 @@ const PendingBookings = () => {
   // Fetch pending bookings
   const fetchPendingBookings = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/students');
+      const res = await axios.get('http://localhost:5000/api/students');
       const pending = res.data.filter(student => student.bookingStatus === 'Pending');
       setPendingBookings(pending);
     } catch (err) {
@@ -19,13 +19,12 @@ const PendingBookings = () => {
     fetchPendingBookings();
   }, []);
 
-  // Approve booking
   const handleApprove = async (id) => {
     try {
-      await axios.put(`http://localhost:5000/booking/${id}`, {
+      await axios.put(`http://localhost:5000/api/students/booking/${id}`, {
         bookingStatus: 'Approved'
       });
-      fetchPendingBookings(); // Refresh list
+      fetchPendingBookings();
     } catch (err) {
       console.error('Error approving booking:', err);
     }

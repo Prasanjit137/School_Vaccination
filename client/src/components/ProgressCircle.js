@@ -18,7 +18,7 @@ const ProgressCircle = ({ percentage, vaccinatedCount, totalStudents }) => (
           textSize: '16px',
         })}
       />
-      {/* Gradient Definition */}
+
       <svg style={{ height: 0 }}>
         <defs>
           <linearGradient id="gradient" x1="1" y1="0" x2="0" y2="1">

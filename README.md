@@ -98,7 +98,7 @@ This system simulates real-world workflows with a focus on data integrity, effec
 	npm start
 ```
 #### 	4. Database Setup
-- Create the database using the provided SQL script (/database/schema.sql).
+- Create the database using the provided SQL script (SQL_Commands.sql).
 
 ## Database Schema
 
@@ -124,6 +124,14 @@ This system simulates real-world workflows with a focus on data integrity, effec
 
 
 ## Screenshots
+
+![App Screenshot](https://github.com/Prasanjit137/School_Vaccination/blob/1b1c77378ab25d9e662fc45d296fed58d4c99012/demo_data/images/Dashboard.png)
+
+![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+
+![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+
+![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
 ![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
